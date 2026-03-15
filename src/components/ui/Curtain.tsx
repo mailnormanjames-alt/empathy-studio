@@ -38,7 +38,7 @@ export default function Curtain() {
           clipPath: 'inset(0% 0 100% 0)',
           duration: 0.65,
           ease: 'power3.inOut',
-          onComplete: () => gsap.set(curtain, { pointerEvents: 'none' }),
+          onComplete: () => { gsap.set(curtain, { pointerEvents: 'none' }) },
         }, '-=0.1')
       return
     }
@@ -55,7 +55,7 @@ export default function Curtain() {
         clipPath: 'inset(0% 0 100% 0)',
         duration: 0.65,
         ease: 'power3.inOut',
-        onComplete: () => gsap.set(curtain, { pointerEvents: 'none' }),
+        onComplete: () => { gsap.set(curtain, { pointerEvents: 'none' }) },
       }, '-=0.1')
   }, [pathname])
 

@@ -1,0 +1,27 @@
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 120px 24px;
+  color: #eaeaea;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.title {
+  font-size: 34px;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.section p {
+  opacity: 0.85;
+}
