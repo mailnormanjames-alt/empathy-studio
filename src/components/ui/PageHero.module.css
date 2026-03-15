@@ -1,0 +1,78 @@
+.hero {
+  position: relative;
+  width: 100vw;
+  padding: 180px var(--page-px) 100px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 55% at 72% 42%, rgba(212,180,114,.07) 0%, transparent 65%),
+    linear-gradient(160deg, #070605, #090806);
+}
+
+.ghost {
+  position: absolute;
+  right: -1vw;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--serif);
+  font-size: clamp(180px, 24vw, 380px);
+  font-weight: 600;
+  color: rgba(255,255,255,.022);
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: -0.04em;
+}
+
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+}
+
+.headline {
+  font-family: var(--serif);
+  font-size: clamp(52px, 8vw, 110px);
+  font-weight: 300;
+  line-height: 1.0;
+  letter-spacing: -0.025em;
+  color: var(--text);
+  position: relative;
+  z-index: 2;
+}
+
+.headline :global(em) {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.ln {
+  display: block;
+  overflow: hidden;
+}
+
+.lnInner {
+  display: block;
+  transform: translateY(105%);
+}
+
+.sub {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--muted);
+  max-width: 420px;
+  margin-top: 28px;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+}

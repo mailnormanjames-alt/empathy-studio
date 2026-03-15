@@ -1,0 +1,110 @@
+.prose {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 2.1;
+}
+
+.prose :global(h2) {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.2vw, 32px);
+  font-weight: 300;
+  letter-spacing: -0.015em;
+  color: var(--text);
+  margin: 52px 0 18px;
+  line-height: 1.15;
+}
+
+.prose :global(h3) {
+  font-family: var(--serif);
+  font-size: clamp(17px, 1.6vw, 22px);
+  font-weight: 300;
+  color: var(--text);
+  margin: 36px 0 14px;
+}
+
+.prose :global(p) {
+  margin-bottom: 24px;
+}
+
+.prose :global(strong) {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.prose :global(em) {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.prose :global(code) {
+  font-family: var(--mono);
+  font-size: 11px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2px 7px;
+  color: var(--gold);
+}
+
+.prose :global(blockquote) {
+  border-left: 2px solid var(--gold);
+  padding: 20px 0 20px 32px;
+  margin: 40px 0;
+}
+
+.prose :global(blockquote p) {
+  font-family: var(--serif);
+  font-size: clamp(17px, 1.8vw, 24px);
+  font-style: italic;
+  color: var(--text);
+  margin-bottom: 0;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.prose :global(blockquote cite) {
+  display: block;
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted2);
+  margin-top: 12px;
+  font-style: normal;
+}
+
+.prose :global(ul) {
+  list-style: none;
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prose :global(li) {
+  padding-left: 20px;
+  position: relative;
+}
+
+.prose :global(li)::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+.prose :global(a) {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(212,180,114,.3);
+  transition: border-color .3s;
+}
+
+.prose :global(a:hover) {
+  border-color: var(--gold);
+}
+
+.prose :global(hr) {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  margin: 52px 0;
+}

@@ -1,0 +1,60 @@
+.hero {
+  position: relative;
+  width: 100vw;
+  padding: 180px var(--page-px) 80px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+.heroBg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 50% 55% at 72% 42%, rgba(212,180,114,.07) 0%, transparent 65%), linear-gradient(160deg,#070605,#090806);
+}
+.headline {
+  font-family: var(--serif);
+  font-size: clamp(52px,8vw,108px);
+  font-weight: 300; line-height: 1.0; letter-spacing: -0.025em; color: var(--text);
+  position: relative; z-index: 2; margin-top: 20px;
+}
+.headline :global(em) { font-style: italic; color: var(--gold); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+
+.card {
+  position: relative; overflow: hidden;
+  background: var(--surface); text-decoration: none;
+  display: block; aspect-ratio: 4/3;
+}
+.large  { grid-column: span 8; }
+.medium { grid-column: span 6; }
+.small  { grid-column: span 4; }
+.tall   { grid-column: span 4; aspect-ratio: 3/4; }
+.wide   { grid-column: span 8; }
+
+.cardImage { position: absolute; inset: 0; }
+
+.cardOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(7,6,5,.85) 100%);
+  display: flex; align-items: flex-start; padding: 20px;
+  opacity: 0; transition: opacity .4s;
+}
+.card:hover .cardOverlay { opacity: 1; }
+.cardMeta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+.tag { font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); border: 1px solid rgba(255,255,255,.15); padding: 4px 10px; }
+
+.cardStrip {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 20px; background: rgba(7,6,5,.75); backdrop-filter: blur(4px);
+}
+.cardTitle { font-family: var(--serif); font-size: clamp(13px,1.2vw,16px); font-weight: 300; color: var(--text); }
+.cardYear  { font-size: 9px; letter-spacing: .1em; color: var(--muted2); }
+
+@media(max-width:900px){
+  .large,.medium,.small,.tall,.wide { grid-column: span 12; aspect-ratio: 4/3; }
+}
