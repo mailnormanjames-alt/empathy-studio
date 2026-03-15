@@ -14,6 +14,20 @@ const ITEMS = [
   { n:'04', title:'Project Four — Coming Soon',  tags:['TBD'],                       year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(120,180,120,.10)' },
   { n:'05', title:'Project Five — Coming Soon',  tags:['TBD'],                       year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(160,100,200,.10)' },
   { n:'06', title:'Project Six — Coming Soon',   tags:['TBD'],                       year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(200,160,80,.10)'  },
+  { n:'07', title:'Project Seven — Coming Soon', tags:['TBD'],                       year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(212,180,114,.10)' },
+  { n:'08', title:'Project Eight — Coming Soon', tags:['TBD'],                       year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(80,140,200,.10)'  },
+  { n:'09', title:'Project Nine — Coming Soon',  tags:['TBD'],                       year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(180,100,60,.10)'  },
+  { n:'10', title:'Project Ten — Coming Soon',   tags:['TBD'],                       year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(120,180,120,.10)' },
+  { n:'11', title:'Project Eleven — Coming Soon',tags:['TBD'],                       year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(160,100,200,.10)' },
+  { n:'12', title:'Project Twelve — Coming Soon',tags:['TBD'],                       year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(200,160,80,.10)'  },
+  { n:'13', title:'Project 13 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(212,180,114,.10)' },
+  { n:'14', title:'Project 14 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(80,140,200,.10)'  },
+  { n:'15', title:'Project 15 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(180,100,60,.10)'  },
+  { n:'16', title:'Project 16 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(120,180,120,.10)' },
+  { n:'17', title:'Project 17 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(160,100,200,.10)' },
+  { n:'18', title:'Project 18 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(200,160,80,.10)'  },
+  { n:'19', title:'Project 19 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(212,180,114,.10)' },
+  { n:'20', title:'Project 20 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(80,140,200,.10)'  },
 ]
 
 export default function ShowcasePage() {
@@ -101,9 +115,9 @@ export default function ShowcasePage() {
       {/* ── TOP VIEWER: Left sidebar + Image right ── */}
       <div className={`${styles.viewer} ${styles.viewerTop}`}>
 
-        {/* Left sidebar — all 6 */}
+        {/* Left sidebar — projects 01–10 */}
         <aside className={styles.sidebarL}>
-          {ITEMS.map((item,i) => (
+          {ITEMS.slice(0,10).map((item,i) => (
             <button key={i} onClick={()=>goTop(i)}
               className={`sc-num sc-name ${styles.sideItem} ${topActive===i ? styles.sideActive:''}`}>
               <span className={styles.sideN}>{item.n}</span>
@@ -220,11 +234,11 @@ export default function ShowcasePage() {
           </div>
         </div>
 
-        {/* Right sidebar — all 6 */}
+        {/* Right sidebar — projects 11–20 */}
         <aside className={`sc-bot-side ${styles.sidebarR}`}>
-          {ITEMS.map((item,i) => (
-            <button key={i} onClick={()=>goBot(i)}
-              className={`${styles.sideItem} ${botActive===i ? styles.sideActive:''}`}>
+          {ITEMS.slice(10,20).map((item,i) => (
+            <button key={i} onClick={()=>goBot(i+10)}
+              className={`${styles.sideItem} ${botActive===i+10 ? styles.sideActive:''}`}>
               <span className={styles.sideN}>{item.n}</span>
               <div className={styles.sideMid}>
                 <span className={styles.sideName}>{item.title}</span>
