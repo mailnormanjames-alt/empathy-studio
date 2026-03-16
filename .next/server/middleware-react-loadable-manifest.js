@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"app\\\\page.tsx -> @/components/ui/OrbCanvas\":{\"id\":\"app\\\\page.tsx -> @/components/ui/OrbCanvas\",\"files\":[\"static/css/_app-pages-browser_src_components_ui_OrbCanvas_tsx.css\",\"static/chunks/_app-pages-browser_src_components_ui_OrbCanvas_tsx.js\"]}}"
