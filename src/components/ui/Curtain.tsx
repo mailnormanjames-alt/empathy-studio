@@ -33,6 +33,10 @@ export default function Curtain() {
 
     const tl = gsap.timeline()
 
+    const disablePointer = () => {
+      gsap.set(curtain, { pointerEvents: 'none' })
+    }
+
     if (isFirst.current) {
       isFirst.current = false
 
@@ -52,9 +56,7 @@ export default function Curtain() {
           clipPath: 'inset(0% 0 100% 0)',
           duration: 0.65,
           ease: 'power3.inOut',
-          onComplete: () => {
-            gsap.set(curtain, { pointerEvents: 'none' })
-          },
+          onComplete: disablePointer,
         },
         '-=0.1'
       )
@@ -91,9 +93,7 @@ export default function Curtain() {
           clipPath: 'inset(0% 0 100% 0)',
           duration: 0.65,
           ease: 'power3.inOut',
-          onComplete: () => {
-            gsap.set(curtain, { pointerEvents: 'none' })
-          },
+          onComplete: disablePointer,
         },
         '-=0.1'
       )
