@@ -33,7 +33,7 @@ export default function Curtain() {
 
     const tl = gsap.timeline()
 
-    const disablePointer = () => {
+    const disablePointer = (): void => {
       gsap.set(curtain, { pointerEvents: 'none' })
     }
 
