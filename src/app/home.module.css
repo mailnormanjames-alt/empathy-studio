@@ -816,6 +816,7 @@
   .spGrid  { grid-template-columns: repeat(2, 1fr); }
   .spHeader { grid-template-columns: 1fr; gap: 16px; padding: 48px var(--page-px) 40px; }
 }
+<<<<<<< HEAD
 
 /* ── SHOWCASE IFRAME CARD (D01 etc) ─────────────────────────────────────────── */
 .scIframeWrap {
@@ -867,3 +868,5 @@
   pointer-events: none;
   transform-origin: top left;
 }
+=======
+>>>>>>> df8d1586397c0a26d58bb0e478ee78f8fd70e745

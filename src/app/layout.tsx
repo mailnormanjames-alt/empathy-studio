@@ -28,6 +28,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet" />
+<<<<<<< HEAD
+=======
+        {/* Right-click protection */}
+>>>>>>> df8d1586397c0a26d58bb0e478ee78f8fd70e745
         <script dangerouslySetInnerHTML={{ __html: `
           document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
           document.addEventListener('keydown', function(e) {
@@ -45,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <BackToTop />
+<<<<<<< HEAD
         <audio id="bg-music" src="/ambient.mp3" autoPlay loop muted />
         <script dangerouslySetInnerHTML={{ __html: `
           (function() {
@@ -60,3 +65,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
+=======
+      </body>
+    </html>
+  )
+}
+>>>>>>> df8d1586397c0a26d58bb0e478ee78f8fd70e745
