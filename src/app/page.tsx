@@ -241,88 +241,11 @@ export default function HomePage() {
       <PhilosophySection />
       <ServicesListSection />
       <StatsSection />
-      <D01Section />
       <ShowcaseSection />
       <ClientDuoSection />
       <ServicePickerSection />
       <CtaSection />
     </div>
-  )
-}
-
-// ── D01 SHOWCASE SECTION ─────────────────────────────────────────────────────
-function D01Section() {
-  const cardRef   = useRef<HTMLDivElement | null>(null)
-  const iframeRef = useRef<HTMLIFrameElement | null>(null)
-  const [hovered, setHovered] = useState(false)
-  const [loaded,  setLoaded]  = useState(false)
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-    const card = cardRef.current
-    if (!card) return
-    gsap.fromTo(card,
-      { opacity: 0, y: 60, scale: 0.97 },
-      { opacity: 1, y: 0, scale: 1, duration: 1.1, ease: 'power3.out',
-        scrollTrigger: { trigger: card, start: 'top 85%' } }
-    )
-  }, [])
-
-  const onEnter = () => {
-    setHovered(true)
-    if (iframeRef.current) gsap.to(iframeRef.current, { scale: 1.03, duration: 0.8, ease: 'power2.out' })
-  }
-  const onLeave = () => {
-    setHovered(false)
-    if (iframeRef.current) gsap.to(iframeRef.current, { scale: 1, duration: 0.6, ease: 'power2.out' })
-  }
-
-  return (
-    <section className={styles.d01Section}>
-      <div className={styles.d01SectionTop}>
-        <p className="eyebrow">2726 Featured client</p>
-        <span style={{ fontSize: '11px', letterSpacing: '0.1em', color: 'var(--muted)' }}>D01</span>
-      </div>
-      <div ref={cardRef} className={styles.d01Card} onMouseEnter={onEnter} onMouseLeave={onLeave}>
-        <div className={styles.d01IframeWrap}>
-          {!loaded && <div className={styles.d01Shimmer} />}
-          <iframe
-            ref={iframeRef}
-            src="/pb-official.html"
-            className={styles.d01Iframe}
-            title="Paul Brunton Foundation"
-            loading="lazy"
-            onLoad={() => setLoaded(true)}
-            tabIndex={-1}
-          />
-          <div className={styles.d01Overlay} />
-          <div className={styles.d01Glow} />
-          <div className={styles.d01Chrome}>
-            <div className={styles.d01Dots}>
-              <span style={{ background: '#ff5f57' }} />
-              <span style={{ background: '#febc2e' }} />
-              <span style={{ background: '#28c840' }} />
-            </div>
-            <div className={styles.d01Url}>paulbruntonfoundation.org</div>
-            <div className={styles.d01Visit}>{hovered ? 'Preview 2197' : ''}</div>
-          </div>
-        </div>
-        <div className={styles.d01Info}>
-          <div className={styles.d01InfoLeft}>
-            <div className={styles.d01Tags}>
-              <span className={styles.d01Tag}>Brand Identity</span>
-              <span className={styles.d01Tag}>Web Design</span>
-            </div>
-            <h3 className={styles.d01Title}>Paul Brunton Foundation</h3>
-            <p className={styles.d01Label}>Philosophy 00b7 Heritage 00b7 India</p>
-          </div>
-          <div className={styles.d01InfoRight}>
-            <span className={styles.d01Year}>2025</span>
-            <span className={styles.d01Arrow}>{hovered ? '2197' : '2192'}</span>
-          </div>
-        </div>
-      </div>
-    </section>
   )
 }
 
@@ -416,25 +339,25 @@ function StatsSection() {
 /* ── SHOWCASE SECTION (homepage teaser) ── */
 const SHOWCASE_ITEMS = [
   {
-    title: 'Aura — Wellness Platform',
-    tags: ['UI/UX', 'Development'],
+    title: 'The Face Never Lies',
+    tags: ['Photography', 'Editorial'],
     year: '2025',
-    image: '/images/work/aura/cover.jpg',
-    slug: 'aura',
+    image: '/images/showcase/D001.jpg',
+    slug: 'norman-james',
   },
   {
-    title: 'Forma — Architecture Studio',
-    tags: ['Branding', 'Graphic Design'],
-    year: '2024',
-    image: '/images/work/forma/cover.jpg',
-    slug: 'forma',
+    title: 'Beyond the Mat',
+    tags: ['Brand Identity', 'Web Design'],
+    year: '2025',
+    image: '/images/showcase/D002.jpg',
+    slug: 'ashtanga-hridaya',
   },
   {
-    title: 'Orbit — SaaS Dashboard',
-    tags: ['UI/UX', 'Motion'],
-    year: '2024',
-    image: '/images/work/orbit/cover.jpg',
-    slug: 'orbit',
+    title: 'Crafted for the Modern Explorer',
+    tags: ['Brand', 'E-Commerce'],
+    year: '2025',
+    image: '/images/showcase/D003.jpg',
+    slug: 'brunton-india',
   },
 ]
 
@@ -463,21 +386,44 @@ function ShowcaseSection() {
       {/* Main card */}
       <div className={styles.scMain}>
         {SHOWCASE_ITEMS.map((item, i) => (
-          <Link
+          <div
             key={item.slug}
-            href={`/work/${item.slug}`}
             className={`${styles.scCard} ${active === i ? styles.scCardActive : ''}`}
           >
-            <div className={styles.scImage}>
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                sizes="100vw"
-                style={{ objectFit: 'cover' }}
-              />
-              <div className={styles.scOverlay} />
-            </div>
+            {'iframe' in item && item.iframe ? (
+              /* ── IFRAME CARD (D01 etc) ── */
+              <div className={styles.scIframeWrap}>
+                {/* Browser chrome */}
+                <div className={styles.scChrome}>
+                  <div className={styles.scChromeDots}>
+                    <span style={{ background: '#ff5f57' }} />
+                    <span style={{ background: '#febc2e' }} />
+                    <span style={{ background: '#28c840' }} />
+                  </div>
+                  <div className={styles.scChromeUrl}>{(item as any).url || ''}</div>
+                </div>
+                <iframe
+                  src={item.iframe}
+                  className={styles.scIframe}
+                  title={item.title}
+                  loading="lazy"
+                  tabIndex={-1}
+                />
+                <div className={styles.scOverlay} />
+              </div>
+            ) : (
+              /* ── IMAGE CARD ── */
+              <div className={styles.scImage}>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="100vw"
+                  style={{ objectFit: 'cover' }}
+                />
+                <div className={styles.scOverlay} />
+              </div>
+            )}
             <div className={styles.scInfo}>
               <div className={styles.scTags}>
                 {item.tags.map((t, ti) => (
@@ -490,7 +436,7 @@ function ShowcaseSection() {
               <h3 className={styles.scTitle}>{item.title}</h3>
               <span className={styles.scYear}>{item.year}</span>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
 
@@ -512,18 +458,18 @@ function ShowcaseSection() {
 // ── CLIENT DUO SECTION ────────────────────────────────────────────────────────
 const DUO_CLIENTS = [
   {
-    name:    'Aura Health',
-    label:   'Wellness · App Design',
-    url:     'https://aura.com',
-    image:   '/images/work/aura/cover.jpg',
+    name:    'Ashtanga Hridaya',
+    label:   'Yoga · Brand Identity',
+    url:     'https://ashtangahridaya.com',
+    image:   '/images/showcase/D004.jpg',
     year:    '2025',
   },
   {
-    name:    'Forma Studio',
-    label:   'Architecture · Brand',
-    url:     'https://forma.studio',
-    image:   '/images/work/forma/cover.jpg',
-    year:    '2024',
+    name:    'Brunton India',
+    label:   'Explorer Gear · E-Commerce',
+    url:     'https://bruntonindia.com',
+    image:   '/images/showcase/D005.jpg',
+    year:    '2025',
   },
 ]
 

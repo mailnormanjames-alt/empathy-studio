@@ -817,59 +817,40 @@
   .spHeader { grid-template-columns: 1fr; gap: 16px; padding: 48px var(--page-px) 40px; }
 }
 
-/* ── D01 SHOWCASE CARD ─────────────────────────────────────────────────────── */
-.d01Section {
-  padding: 0 var(--page-px) 80px;
-  max-width: var(--max-w);
-  margin: 0 auto;
-}
-.d01SectionTop {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-.d01Card {
-  position: relative;
-  width: 100%;
-  border: 1px solid rgba(232,228,220,0.07);
-  background: #0d0d0b;
-  overflow: hidden;
-  cursor: pointer;
-  transition: border-color 0.4s ease;
-}
-.d01Card:hover { border-color: rgba(184,144,42,0.35); }
-.d01IframeWrap {
-  position: relative;
-  width: 100%;
-  height: 560px;
-  overflow: hidden;
+/* ── SHOWCASE IFRAME CARD (D01 etc) ─────────────────────────────────────────── */
+.scIframeWrap {
+  position: absolute;
+  inset: 0;
   background: #080808;
+  overflow: hidden;
 }
-.d01Chrome {
+.scChrome {
   position: absolute;
   top: 0; left: 0; right: 0;
   z-index: 10;
-  height: 36px;
+  height: 32px;
   background: rgba(10,10,8,0.95);
   border-bottom: 1px solid rgba(232,228,220,0.06);
   display: flex;
   align-items: center;
-  padding: 0 14px;
-  gap: 10px;
-  backdrop-filter: blur(8px);
+  padding: 0 12px;
+  gap: 8px;
 }
-.d01Dots { display: flex; gap: 6px; flex-shrink: 0; }
-.d01Dots span {
+.scChromeDots {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
+.scChromeDots span {
   display: block;
-  width: 11px; height: 11px;
+  width: 10px; height: 10px;
   border-radius: 50%;
   opacity: 0.85;
 }
-.d01Url {
+.scChromeUrl {
   flex: 1;
   font-size: 10px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   color: rgba(232,228,220,0.3);
   font-family: 'Geist Mono', monospace;
   text-align: center;
@@ -877,98 +858,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.d01Visit {
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  color: #B8902A;
-  flex-shrink: 0;
-  min-width: 60px;
-  text-align: right;
-  transition: opacity 0.3s;
-}
-.d01Iframe {
+.scIframe {
   position: absolute;
-  top: 36px; left: 0;
+  top: 32px; left: 0;
   width: 100%;
-  height: calc(100% - 36px);
+  height: calc(100% - 32px);
   border: none;
-  transform-origin: top center;
   pointer-events: none;
-  display: block;
+  transform-origin: top left;
 }
-.d01Overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 5;
-  background: transparent;
-}
-.d01Glow {
-  position: absolute;
-  inset: 0;
-  z-index: 4;
-  opacity: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(184,144,42,0.12) 0%, transparent 70%);
-  pointer-events: none;
-  transition: opacity 0.6s ease;
-}
-.d01Card:hover .d01Glow { opacity: 1; }
-.d01Shimmer {
-  position: absolute;
-  inset: 0;
-  z-index: 6;
-  background: linear-gradient(90deg, #0d0d0b 25%, #161612 50%, #0d0d0b 75%);
-  background-size: 200% 100%;
-  animation: d01Shimmer 1.6s infinite;
-}
-@keyframes d01Shimmer {
-  0%   { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
-.d01Info {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 24px 28px;
-  border-top: 1px solid rgba(232,228,220,0.06);
-}
-.d01InfoLeft { display: flex; flex-direction: column; gap: 6px; }
-.d01Tags { display: flex; gap: 8px; flex-wrap: wrap; }
-.d01Tag {
-  font-size: 9px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #B8902A;
-  border: 1px solid rgba(184,144,42,0.3);
-  padding: 3px 9px;
-}
-.d01Title {
-  font-family: var(--serif);
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-  font-weight: 300;
-  color: var(--text);
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-}
-.d01Label {
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-}
-.d01InfoRight {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
-}
-.d01Year {
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  color: rgba(232,228,220,0.25);
-}
-.d01Arrow {
-  font-size: 1.4rem;
-  color: #B8902A;
-  transition: transform 0.3s ease;
-  display: block;
-}
-.d01Card:hover .d01Arrow { transform: translate(3px, -3px); }
