@@ -9,20 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@netlify/plugin-nextjs": "^5.15.9",
-=======
->>>>>>> df8d1586397c0a26d58bb0e478ee78f8fd70e745
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
     "gsap": "^3.12.5",
     "lenis": "^1.1.9",
     "next": "14.2.5",
-<<<<<<< HEAD
-    "next-mdx-remote": "^4.4.1",
-=======
     "next-mdx-remote": "^6.0.0",
->>>>>>> df8d1586397c0a26d58bb0e478ee78f8fd70e745
     "react": "^18",
     "react-dom": "^18"
   },
