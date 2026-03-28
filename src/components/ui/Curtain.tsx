@@ -28,48 +28,12 @@ export default function Curtain() {
   useEffect(() => {
     const curtain = curtainRef.current
     const word = wordRef.current
-<<<<<<< HEAD
-
     if (!curtain || !word) return
 
-    // Explicitly typed as void so GSAP TypeScript overloads resolve correctly
-=======
-    if (!curtain || !word) return
-
->>>>>>> df8d1586397c0a26d58bb0e478ee78f8fd70e745
     const disablePointer = (): void => {
       gsap.set(curtain, { pointerEvents: 'none' })
     }
 
-<<<<<<< HEAD
-    if (isFirst.current) {
-      isFirst.current = false
-
-      gsap.set(curtain, {
-        clipPath: 'inset(0% 0 0% 0)',
-        pointerEvents: 'none',
-      })
-
-      // Store timeline in variable — fixes TS overload resolution on chained .to()
-      const tl = gsap.timeline()
-      tl.to(word, {
-        opacity: 0,
-        y: -20,
-        duration: 0.3,
-        ease: 'power2.in',
-      })
-      tl.to(
-        curtain,
-        {
-          clipPath: 'inset(0% 0 100% 0)',
-          duration: 0.65,
-          ease: 'power3.inOut',
-          onComplete: disablePointer,
-        },
-        '-=0.1'
-      )
-
-=======
     const tl = gsap.timeline()
 
     if (isFirst.current) {
@@ -77,52 +41,17 @@ export default function Curtain() {
       gsap.set(curtain, { clipPath: 'inset(0% 0 0% 0)', pointerEvents: 'none' })
       tl.to(word, { opacity: 0, y: -20, duration: 0.3, ease: 'power2.in' })
       tl.to(curtain, { clipPath: 'inset(0% 0 100% 0)', duration: 0.65, ease: 'power3.inOut', onComplete: disablePointer }, '-=0.1')
->>>>>>> df8d1586397c0a26d58bb0e478ee78f8fd70e745
       return () => { tl.kill() }
     }
 
     const label = PAGE_LABELS[pathname] ?? ''
     word.textContent = label
 
-<<<<<<< HEAD
-    const tl = gsap.timeline()
-    tl.set(curtain, {
-      clipPath: 'inset(0% 0 100% 0)',
-      pointerEvents: 'all',
-    })
-    tl.to(curtain, {
-      clipPath: 'inset(0% 0 0% 0)',
-      duration: 0.65,
-      ease: 'power3.inOut',
-    })
-    tl.fromTo(
-      word,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' },
-      '-=0.2'
-    )
-    tl.to(
-      word,
-      { opacity: 0, y: -20, duration: 0.3, ease: 'power2.in' },
-      '+=0.15'
-    )
-    tl.to(
-      curtain,
-      {
-        clipPath: 'inset(0% 0 100% 0)',
-        duration: 0.65,
-        ease: 'power3.inOut',
-        onComplete: disablePointer,
-      },
-      '-=0.1'
-    )
-=======
     tl.set(curtain, { clipPath: 'inset(0% 0 100% 0)', pointerEvents: 'all' })
     tl.to(curtain, { clipPath: 'inset(0% 0 0% 0)', duration: 0.65, ease: 'power3.inOut' })
     tl.fromTo(word, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, '-=0.2')
     tl.to(word, { opacity: 0, y: -20, duration: 0.3, ease: 'power2.in' }, '+=0.15')
     tl.to(curtain, { clipPath: 'inset(0% 0 100% 0)', duration: 0.65, ease: 'power3.inOut', onComplete: disablePointer }, '-=0.1')
->>>>>>> df8d1586397c0a26d58bb0e478ee78f8fd70e745
 
     return () => { tl.kill() }
   }, [pathname])
