@@ -28,7 +28,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet" />
-        {/* Right-click protection */}
         <script dangerouslySetInnerHTML={{ __html: `
           document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
           document.addEventListener('keydown', function(e) {
@@ -63,8 +62,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 }
 ```
 
-Save, then:
+Then in terminal:
 ```
 git add src/app/layout.tsx
-git commit -m "fix merge conflict"
+git commit -m "clean layout"
 git push
