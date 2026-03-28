@@ -60,10 +60,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
-```
-
-Then in terminal:
-```
-git add src/app/layout.tsx
-git commit -m "clean layout"
-git push
