@@ -173,33 +173,40 @@ export default function ShowcasePage() {
         </div>
       </div>
 
-      {/* ── 6-CARD GRID ── */}
+      {/* ── CARD GRID ── */}
       <section className={styles.grid}>
         <div className={styles.gridHdr}>
           <p className="eyebrow">✦ All projects</p>
         </div>
         <div className={styles.gridItems}>
           {ITEMS.map((item,i)=>(
-            <Link key={i} href={`/work/${item.slug}`} className={`sc-gc ${styles.gCard}`}>
-              <div className={styles.gImg}>
-                <Image src={item.image} alt={item.title} fill
-                  sizes="(max-width:900px) 100vw, 33vw" style={{objectFit:'cover'}}/>
-                <div className={styles.gOverlay}/>
-                <div className={styles.gAccent} style={{background:`radial-gradient(ellipse 70% 60% at 50% 60%,${item.color},transparent)`}}/>
-              </div>
-              <div className={styles.gStrip}>
-                <div>
-                  <div className={styles.gTags}>
-                    {item.tags.map(t=><span key={t} className={styles.gTag}>{t}</span>)}
+            <div key={i} className={`sc-gc ${styles.gCard}`}>
+              <Link href={`/work/${item.slug}`} className={styles.gCardLink}>
+                <div className={styles.gImg}>
+                  <Image src={item.image} alt={item.title} fill
+                    sizes="(max-width:900px) 100vw, 33vw" style={{objectFit:'cover'}}/>
+                  <div className={styles.gOverlay}/>
+                  <div className={styles.gAccent} style={{background:`radial-gradient(ellipse 70% 60% at 50% 60%,${item.color},transparent)`}}/>
+                </div>
+                <div className={styles.gStrip}>
+                  <div>
+                    <div className={styles.gTags}>
+                      {item.tags.map(t=><span key={t} className={styles.gTag}>{t}</span>)}
+                    </div>
+                    <h3 className={styles.gTitle}>{item.title}</h3>
                   </div>
-                  <h3 className={styles.gTitle}>{item.title}</h3>
+                  <div className={styles.gRight}>
+                    <span className={styles.gYear}>{item.year}</span>
+                    <span className={styles.gArrow}>↗</span>
+                  </div>
                 </div>
-                <div className={styles.gRight}>
-                  <span className={styles.gYear}>{item.year}</span>
-                  <span className={styles.gArrow}>↗</span>
-                </div>
-              </div>
-            </Link>
+              </Link>
+              {item.liveUrl && (
+                <a href={item.liveUrl} target="_blank" rel="noopener noreferrer" className={styles.gLive}>
+                  Visit site ↗
+                </a>
+              )}
+            </div>
           ))}
         </div>
       </section>

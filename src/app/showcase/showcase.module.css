@@ -165,9 +165,17 @@
 }
 .gCard {
   background: var(--bg); display: flex; flex-direction: column;
-  text-decoration: none; overflow: hidden; opacity: 0; transition: background .3s;
+  overflow: hidden; opacity: 0; transition: background .3s;
 }
 .gCard:hover { background: var(--bg2); }
+.gCardLink { text-decoration: none; display: flex; flex-direction: column; flex: 1; }
+.gLive {
+  display: block; padding: 12px 24px;
+  font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--gold); text-decoration: none; border-top: 1px solid var(--border);
+  transition: background .3s;
+}
+.gLive:hover { background: rgba(212,180,114,.04); }
 .gImg {
   position: relative; aspect-ratio: 4/3; overflow: hidden; background: var(--surface);
 }
