@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styles from './showcase.module.css'
 
 const ITEMS = [
-  { n:'01', title:'The Auction',                tags:['TBD'], year:'2025', image:'/images/work/aura/cover1.jpg', slug:'aura',  color:'rgba(212,180,114,.15)', liveUrl:'https://the-auction-snowy.vercel.app' },
+  { n:'01', title:'The Auction',                tags:['TBD'], year:'2025', image:'/images/work/the-auction/cover.jpg', slug:'aura',  color:'rgba(212,180,114,.15)', liveUrl:'https://the-auction-snowy.vercel.app' },
   { n:'02', title:'The Ghost',                  tags:['TBD'], year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(180,100,60,.12)',  liveUrl:'https://the-ghost-two.vercel.app' },
   { n:'03', title:'The Maze',                   tags:['TBD'], year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(80,140,200,.12)',  liveUrl:'https://the-maze-iota.vercel.app' },
   { n:'04', title:'The Embassy',                tags:['TBD'], year:'2025', image:'/images/work/pulse/cover.jpg', slug:'pulse', color:'rgba(120,180,120,.10)', liveUrl:'https://the-embassy.vercel.app' },
