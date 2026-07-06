@@ -1,0 +1,16 @@
+SHOWCASE BOTTOM VIEWER IMAGES (10 items)
+=========================================
+These appear in the bottom viewer section (image left + right sidebar 11-20).
+
+File name         Card   Project
+-------           ----   -------
+11.jpg            11     Yuki Tanaka
+12.jpg            12     Elena Marchetti
+13.jpg            13     Project 13
+14.jpg            14     Project 14
+15.jpg            15     Project 15
+16.jpg            16     Project 16
+17.jpg            17     Project 17
+18.jpg            18     Project 18
+19.jpg            19     Project 19
+20.jpg            20     Project 20

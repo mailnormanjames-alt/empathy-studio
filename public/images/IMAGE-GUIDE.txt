@@ -1,0 +1,71 @@
+MASTER IMAGE GUIDE - ALL 47 IMAGES
+====================================
+
+FOLDER: images/homepage/ (3 images)
+------------------------------------
+File         Card   Section
+01.jpg       01     Homepage showcase carousel
+02.jpg       02     Homepage showcase carousel
+03.jpg       03     Homepage showcase carousel
+
+FOLDER: images/showcase-top/ (10 images)
+-----------------------------------------
+File         Card   Section
+01.jpg       01     Showcase top viewer (sidebar + image)
+02.jpg       02     Showcase top viewer
+03.jpg       03     Showcase top viewer
+04.jpg       04     Showcase top viewer
+05.jpg       05     Showcase top viewer
+06.jpg       06     Showcase top viewer
+07.jpg       07     Showcase top viewer
+08.jpg       08     Showcase top viewer
+09.jpg       09     Showcase top viewer
+10.jpg       10     Showcase top viewer
+
+FOLDER: images/showcase-grid/ (20 images)
+------------------------------------------
+File         Card   Section
+01.jpg       01     Showcase grid cards
+02.jpg       02     Showcase grid cards
+03.jpg       03     Showcase grid cards
+04.jpg       04     Showcase grid cards
+05.jpg       05     Showcase grid cards
+06.jpg       06     Showcase grid cards
+07.jpg       07     Showcase grid cards
+08.jpg       08     Showcase grid cards
+09.jpg       09     Showcase grid cards
+10.jpg       10     Showcase grid cards
+11.jpg       11     Showcase grid cards
+12.jpg       12     Showcase grid cards
+13.jpg       13     Showcase grid cards
+14.jpg       14     Showcase grid cards
+15.jpg       15     Showcase grid cards
+16.jpg       16     Showcase grid cards
+17.jpg       17     Showcase grid cards
+18.jpg       18     Showcase grid cards
+19.jpg       19     Showcase grid cards
+20.jpg       20     Showcase grid cards
+
+FOLDER: images/showcase-bottom/ (10 images)
+--------------------------------------------
+File         Card   Section
+11.jpg       11     Showcase bottom viewer (image + sidebar)
+12.jpg       12     Showcase bottom viewer
+13.jpg       13     Showcase bottom viewer
+14.jpg       14     Showcase bottom viewer
+15.jpg       15     Showcase bottom viewer
+16.jpg       16     Showcase bottom viewer
+17.jpg       17     Showcase bottom viewer
+18.jpg       18     Showcase bottom viewer
+19.jpg       19     Showcase bottom viewer
+20.jpg       20     Showcase bottom viewer
+
+FOLDER: images/work/ (4 existing placeholder images)
+------------------------------------------------------
+Folder             Used by
+aura/cover.jpg     Work page, case studies
+forma/cover.jpg    Work page, case studies
+orbit/cover.jpg    Work page, case studies
+pulse/cover.jpg    Work page, case studies
+
+TOTAL: 47 unique images

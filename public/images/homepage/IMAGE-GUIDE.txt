@@ -1,0 +1,9 @@
+HOMEPAGE SHOWCASE IMAGES (3 items)
+===================================
+These appear in the homepage showcase carousel section.
+
+File name         Card   Project
+-------           ----   -------
+01.jpg            01     The Face Never Lies
+02.jpg            02     Beyond the Mat
+03.jpg            03     Crafted for the Modern Explorer
