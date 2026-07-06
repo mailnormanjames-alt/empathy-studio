@@ -8,26 +8,26 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styles from './showcase.module.css'
 
 const ITEMS = [
-  { n:'01', title:'Aura — Wellness Platform',    tags:['UI/UX','Development'],       year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(212,180,114,.15)' },
-  { n:'02', title:'Forma — Architecture Studio', tags:['Branding','Graphic Design'], year:'2024', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(180,100,60,.12)'  },
-  { n:'03', title:'Orbit — SaaS Dashboard',      tags:['UI/UX','Motion'],            year:'2024', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(80,140,200,.12)'  },
-  { n:'04', title:'Project Four — Coming Soon',  tags:['TBD'],                       year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(120,180,120,.10)' },
-  { n:'05', title:'Project Five — Coming Soon',  tags:['TBD'],                       year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(160,100,200,.10)' },
-  { n:'06', title:'Project Six — Coming Soon',   tags:['TBD'],                       year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(200,160,80,.10)'  },
-  { n:'07', title:'Project Seven — Coming Soon', tags:['TBD'],                       year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(212,180,114,.10)' },
-  { n:'08', title:'Project Eight — Coming Soon', tags:['TBD'],                       year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(80,140,200,.10)'  },
-  { n:'09', title:'Project Nine — Coming Soon',  tags:['TBD'],                       year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(180,100,60,.10)'  },
-  { n:'10', title:'Project Ten — Coming Soon',   tags:['TBD'],                       year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(120,180,120,.10)' },
-  { n:'11', title:'Project Eleven — Coming Soon',tags:['TBD'],                       year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(160,100,200,.10)' },
-  { n:'12', title:'Project Twelve — Coming Soon',tags:['TBD'],                       year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(200,160,80,.10)'  },
-  { n:'13', title:'Project 13 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(212,180,114,.10)' },
-  { n:'14', title:'Project 14 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(80,140,200,.10)'  },
-  { n:'15', title:'Project 15 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(180,100,60,.10)'  },
-  { n:'16', title:'Project 16 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(120,180,120,.10)' },
-  { n:'17', title:'Project 17 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(160,100,200,.10)' },
-  { n:'18', title:'Project 18 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(200,160,80,.10)'  },
-  { n:'19', title:'Project 19 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(212,180,114,.10)' },
-  { n:'20', title:'Project 20 — Coming Soon',    tags:['TBD'],                       year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(80,140,200,.10)'  },
+  { n:'01', title:'The Auction',                tags:['TBD'], year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(212,180,114,.15)', liveUrl:'https://the-auction-snowy.vercel.app' },
+  { n:'02', title:'The Ghost',                  tags:['TBD'], year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(180,100,60,.12)',  liveUrl:'https://the-ghost-two.vercel.app' },
+  { n:'03', title:'The Maze',                   tags:['TBD'], year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(80,140,200,.12)',  liveUrl:'https://the-maze-iota.vercel.app' },
+  { n:'04', title:'The Embassy',                tags:['TBD'], year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(120,180,120,.10)', liveUrl:'https://the-embassy.vercel.app' },
+  { n:'05', title:'The Opera',                  tags:['TBD'], year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(160,100,200,.10)', liveUrl:'https://the-opera.vercel.app' },
+  { n:'06', title:'Imperial Express',           tags:['TBD'], year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(200,160,80,.10)',  liveUrl:'https://the-imperial-express.vercel.app' },
+  { n:'07', title:'The Observatory',            tags:['TBD'], year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(212,180,114,.10)', liveUrl:'https://the-observatory-olive.vercel.app' },
+  { n:'08', title:'Cabaret Decadence',          tags:['TBD'], year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(80,140,200,.10)',  liveUrl:'https://cabaret-decadence-kappa.vercel.app' },
+  { n:'09', title:'Project Nine — Coming Soon',  tags:['TBD'], year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(180,100,60,.10)'  },
+  { n:'10', title:'Project Ten — Coming Soon',   tags:['TBD'], year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(120,180,120,.10)' },
+  { n:'11', title:'Yuki Tanaka',                tags:['TBD'], year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(160,100,200,.10)', liveUrl:'https://yuki-tanaka-eight.vercel.app' },
+  { n:'12', title:'Elena Marchetti',            tags:['TBD'], year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(200,160,80,.10)',  liveUrl:'https://elena-marchetti-livid.vercel.app' },
+  { n:'13', title:'Project 13 — Coming Soon',    tags:['TBD'], year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(212,180,114,.10)' },
+  { n:'14', title:'Project 14 — Coming Soon',    tags:['TBD'], year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(80,140,200,.10)'  },
+  { n:'15', title:'Project 15 — Coming Soon',    tags:['TBD'], year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(180,100,60,.10)'  },
+  { n:'16', title:'Project 16 — Coming Soon',    tags:['TBD'], year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(120,180,120,.10)' },
+  { n:'17', title:'Project 17 — Coming Soon',    tags:['TBD'], year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(160,100,200,.10)' },
+  { n:'18', title:'Project 18 — Coming Soon',    tags:['TBD'], year:'2025', image:'/images/work/orbit/cover.jpg', slug:'orbit', color:'rgba(200,160,80,.10)'  },
+  { n:'19', title:'Project 19 — Coming Soon',    tags:['TBD'], year:'2025', image:'/images/work/aura/cover.jpg',  slug:'aura',  color:'rgba(212,180,114,.10)' },
+  { n:'20', title:'Project 20 — Coming Soon',    tags:['TBD'], year:'2025', image:'/images/work/forma/cover.jpg', slug:'forma', color:'rgba(80,140,200,.10)'  },
 ]
 
 export default function ShowcasePage() {
@@ -155,7 +155,14 @@ export default function ShowcasePage() {
             <Link href={`/work/${ITEMS[topActive].slug}`} className={styles.iTitle}>
               {ITEMS[topActive].title}
             </Link>
-            <span className={styles.iYear}>{ITEMS[topActive].year}</span>
+            <div className={styles.iBottom}>
+              <span className={styles.iYear}>{ITEMS[topActive].year}</span>
+              {ITEMS[topActive].liveUrl && (
+                <a href={ITEMS[topActive].liveUrl} target="_blank" rel="noopener noreferrer" className={styles.iLive}>
+                  Visit site ↗
+                </a>
+              )}
+            </div>
           </div>
           <div className={styles.dots}>
             {ITEMS.map((_,i)=>(
@@ -224,7 +231,14 @@ export default function ShowcasePage() {
             <Link href={`/work/${ITEMS[botActive].slug}`} className={styles.iTitle}>
               {ITEMS[botActive].title}
             </Link>
-            <span className={styles.iYear}>{ITEMS[botActive].year}</span>
+            <div className={styles.iBottom}>
+              <span className={styles.iYear}>{ITEMS[botActive].year}</span>
+              {ITEMS[botActive].liveUrl && (
+                <a href={ITEMS[botActive].liveUrl} target="_blank" rel="noopener noreferrer" className={styles.iLive}>
+                  Visit site ↗
+                </a>
+              )}
+            </div>
           </div>
           <div className={styles.dots}>
             {ITEMS.map((_,i)=>(

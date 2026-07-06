@@ -133,6 +133,13 @@
 }
 .iTitle:hover { color: var(--gold); }
 .iYear { font-size: 9px; letter-spacing: .14em; color: var(--muted2); }
+.iBottom { display: flex; align-items: center; gap: 16px; }
+.iLive {
+  font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--gold); text-decoration: none;
+  transition: opacity .3s;
+}
+.iLive:hover { opacity: .7; }
 
 /* Dots */
 .dots {
